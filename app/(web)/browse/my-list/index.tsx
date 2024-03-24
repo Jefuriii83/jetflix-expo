@@ -1,8 +1,8 @@
 import { FlatList, ScrollView, Text, View } from "react-native";
-import Subheader from "../../../packages/components/Subheader";
-import categories from "../../../packages/assets/data/categories";
-import Card from "../../../packages/components/Card";
-import Footer from "../../../packages/components/Footer";
+
+import categories from "@/packages/assets/data/categories";
+import Card from "@/packages/components/Card";
+import Footer from "@/packages/components/Footer";
 
 const myList = () => {
   return (

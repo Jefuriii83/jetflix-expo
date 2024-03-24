@@ -33,7 +33,7 @@ const Card = (props: HomeProperties) => {
 
   return (
     <>
-      <Text className="text-white text-base font-bold ms:text-sm xl:text-4xl">
+      <Text className="text-white text-base font-bold ms:text-sm mm:text-sm ml:text-sm tablet:text-sm ls:text-base ll:text-base xl:text-4xl">
         {category.title}
       </Text>
 

@@ -1,18 +1,17 @@
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { View, Text, Pressable, Image } from "react-native";
 import { Path, Svg } from "react-native-svg";
-import Card from "./Card";
-import ProfileCard from "./ProfileCard";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
-import profile from "../../app/profile";
 import { TouchableOpacity } from "react-native";
 
 const Navbar = () => {
   return (
     <View className=" h-14 w-full flex-row items-center px-16 z-20 bg-[#000000bd] ms:px-5 mm:px-5 ml:px-5 xl:h-32">
-      <Text className="font-bold text-red-500 ms:text-2xl mm:text-2xl ml:text-2xl tablet:text-2xl ls:text-3xl ll:text-3xl xl:text-7xl">
-        Jetflix
-      </Text>
+      <Pressable onPress={() => {router.navigate({pathname: '/(web)/browse/'})}}>
+        <Text className="font-bold text-red-500 ms:text-2xl mm:text-2xl ml:text-2xl tablet:text-2xl ls:text-3xl ll:text-3xl xl:text-7xl">
+          Jetflix
+        </Text>
+      </Pressable>
 
       <View className="flex-row px-3 gap-x-8 ">
         <TouchableOpacity className="border-2 border-white bg-transparent p-1 flex-row items-center  ls:hidden ll:hidden xl:hidden">
@@ -23,7 +22,7 @@ const Navbar = () => {
         <View className="flex-row px-1 gap-x-8 ms:hidden mm:hidden ml:hidden tablet:hidden">
           <Link
             href={{
-              pathname: "/browse",
+              pathname: "/(web)/browse",
             }}
             className="text-white xl:text-4xl"
           >
@@ -31,7 +30,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={{
-              pathname: "/browse/tv_shows",
+              pathname: "/(web)/browse/genre/tv-shows",
             }}
             className="text-white xl:text-4xl "
           >
@@ -39,7 +38,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={{
-              pathname: "/browse/movies",
+              pathname: "/(web)/browse/genre/movies",
             }}
             className="text-white xl:text-4xl"
           >
@@ -47,7 +46,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={{
-              pathname: "/browse/news_and_popular",
+              pathname: "/(web)/browse/latest",
             }}
             className="text-white xl:text-4xl"
           >
@@ -55,7 +54,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={{
-              pathname: "/browse/my_list",
+              pathname: "/(web)/browse/my-list",
             }}
             className="text-white xl:text-4xl"
           >
@@ -69,7 +68,7 @@ const Navbar = () => {
         </View>
       </View>
 
-      <View className="w-[120px] h-[30px] flex items-center flex-row gap-x-1 absolute right-14 ms:-right-8 mm:-right-8 ml:-right-8 " >
+      <View className="w-[120px] h-[30px] flex items-center flex-row gap-x-1 absolute right-14 ms:-right-8 mm:-right-8 ml:-right-8 ">
         {/* Search Icon*/}
         <Pressable className="w-auto h-auto ms:hidden mm:hidden ml:hidden  xl:w-14 xl:h-14">
           <Svg

@@ -1,17 +1,19 @@
 import { FlatList, ScrollView, Text, View } from "react-native";
-import categories from "../../../packages/assets/data/categories";
-import Card from "../../../packages/components/Card";
-import Footer from "../../../packages/components/Footer";
 
-const newsAndPopular = () => {
+import categories from "@/packages/assets/data/categories";
+import Footer from "@/packages/components/Footer";
+import Card from "@/packages/components/Card";
+import Subheader from "@/packages/components/Subheader";
+
+const tvShows = () => {
   return (
     <ScrollView>
       {/* <Navbar/> */}
-      <View className="w-11/12 mt-5 h-auto self-center flex">
+      <Subheader genreTitle="TV Shows"/>
 
-      <View>
-          <Text className="text-white text-2xl font-bold pb-4">New & Popular</Text>
-        </View>
+      <View className="w-11/12 mt-5 h-auto self-center flex">
+        
+
         {/* Cards */}
         <FlatList
           // className="overflow-x-hidden"
@@ -25,4 +27,5 @@ const newsAndPopular = () => {
     </ScrollView>
   );
 };
-export default newsAndPopular;
+
+export default tvShows

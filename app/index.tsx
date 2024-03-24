@@ -17,7 +17,7 @@ NativeWindStyleSheet.setOutput({
 
 export default function App() {
   return (
-    <View className="w-full h-full ">
+    <View className="w-screen h-screen">
       <ImageBackground
         className="w-screen h-screen"
         resizeMode="cover"

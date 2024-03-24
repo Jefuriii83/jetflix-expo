@@ -1,14 +1,15 @@
-import { FlatList, ScrollView, Text, View } from "react-native";
-import categories from "../../../packages/assets/data/categories";
-import Footer from "../../../packages/components/Footer";
-import Card from "../../../packages/components/Card";
-import Subheader from "../../../packages/components/Subheader";
+import { FlatList, ScrollView, Text, View } from "react-native"
 
-const tvShows = () => {
+import Footer from "@/packages/components/Footer";
+import categories from "@/packages/assets/data/categories";
+import Card from "@/packages/components/Card";
+import Subheader from "@/packages/components/Subheader";
+
+const movies = () => {
   return (
     <ScrollView>
       {/* <Navbar/> */}
-      <Subheader genreTitle="TV Shows"/>
+      <Subheader genreTitle="Movies"/>
 
       <View className="w-11/12 mt-5 h-auto self-center flex">
         
@@ -25,6 +26,5 @@ const tvShows = () => {
       <Footer></Footer>
     </ScrollView>
   );
-};
-
-export default tvShows
+}
+export default movies
