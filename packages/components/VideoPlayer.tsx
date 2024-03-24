@@ -2,6 +2,7 @@ import { View, Text } from 'react-native'
 import React, { useEffect, useRef, useState} from 'react'
 import { Video, ResizeMode} from 'expo-av'
 import { Playback } from 'expo-av/build/AV'
+import { Platform } from 'react-native'
 
 interface VideoPlayerProps {
     episode: {
@@ -11,8 +12,11 @@ interface VideoPlayerProps {
         duration: string,
         plot: string,
         video:string,
-    }
+    },
+
 }
+
+const isWeb = Platform.OS === 'web'
 
 const VideoPlayer = (props: VideoPlayerProps) => {
 
@@ -34,7 +38,21 @@ const VideoPlayer = (props: VideoPlayerProps) => {
         }
       )()
     }, [episode]);
-  return (
+
+
+  return isWeb ? (
+
+    <Video
+    ref={video}
+      className='aspect-video object-contain'
+      source={{
+        uri: episode.video,
+      }}
+      useNativeControls
+      resizeMode={ResizeMode.CONTAIN}
+      onPlaybackStatusUpdate={status => setStatus(() => status)}
+  />
+  ) : (
 
       <Video
       ref={video}
