@@ -1,8 +1,9 @@
-import { View, Text } from "./Themed";
 import React from "react";
+
 import { FlatList } from "react-native-gesture-handler";
+
 import categories from "../assets/data/categories";
-import { Dimensions, Image, Platform } from "react-native";
+import { Dimensions, Image, Platform, View } from "react-native";
 
 const MoreLikeThis = () => {
   const series = categories.items[0];

@@ -46,37 +46,39 @@ const VideoPlayer = (props: VideoPlayerProps) => {
     }, [episode]);
 
 
-    return isWeb ? (
-      <Video
-          ref={video}
-          className='aspect-video object-contain'
-          source={{
-              uri: episode.video,
-          }}
-          useNativeControls
-          resizeMode={ResizeMode.CONTAIN}
-          onPlaybackStatusUpdate={status => setStatus(() => status)}
-      />
+  return isWeb ? (
+
+    <Video
+    ref={video}
+      className='aspect-video object-contain'
+      source={{
+        uri: episode.video,
+      }}
+      useNativeControls
+      resizeMode={ResizeMode.CONTAIN}
+      onPlaybackStatusUpdate={status => setStatus(() => status)}
+  />
   ) : (
+
       <Video
-          ref={video}
-          className='w-[100%] aspect-video'
-          
-          source={{
-              uri: episode.video,
-          }}
-          posterSource={{
-              uri: episode.poster,
-          }}
-          posterStyle={{
-              resizeMode: "cover",
-          }}
-          usePoster={true}
-          useNativeControls
-          resizeMode={ResizeMode.CONTAIN}
-          onPlaybackStatusUpdate={status => setStatus(() => status)}
-      />
-  );
+      ref={video}
+        className='w-screen h-full aspect-video'
+        source={{
+          uri: episode.video,
+        }}
+        posterSource={{
+            uri: episode.poster,
+        }}
+        posterStyle={{
+          resizeMode: "cover",
+        }}
+        usePoster={true}
+        useNativeControls
+        resizeMode={ResizeMode.CONTAIN}
+        onPlaybackStatusUpdate={status => setStatus(() => status)}
+    />
+
+  )
 }
 
 export default VideoPlayer;
