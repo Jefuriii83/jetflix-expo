@@ -2,7 +2,6 @@ import { useLocalSearchParams } from "expo-router";
 import {
   View,
   Text,
-  TouchableOpacity,
   Pressable,
   FlatList,
 } from "react-native";
@@ -10,7 +9,6 @@ import {
 import ProfileCard from "../../packages/components/ProfileCard";
 import profiles from "../../packages/assets/data/profiles";
 import { Platform } from "react-native";
-import { MonoText } from "../../packages/components/StyledText";
 
 const profile = () => {
   const { id } = useLocalSearchParams();
@@ -51,7 +49,7 @@ const profile = () => {
       </View>
 
       <Pressable className="self-center">
-        <Text className="border text-gray-400 border-gray-400 mt-7 mb-4 ms:text-sm ms:mt-6 ms:mb-3 mm:mt-6 mm:mb-3 ml:mt-6 ml:mb-3 mm:text-sm ml:text-sm tablet:mt-6 tablet:mb-3 tablet:text-sm ls:mt-6 ls:mb-3 ls:text-sm ll:mt-8 ll:mb-4 ll:text-lg xl:text-2xl">
+        <Text className="border p-2  text-gray-400 border-gray-400 mt-2  mb-4 ms:text-sm ms:mt-6 ms:mb-3 mm:mt-6 mm:mb-3 ml:mt-6 ml:mb-3 mm:text-sm ml:text-sm tablet:mt-6 tablet:mb-3 tablet:text-sm ls:mt-6 ls:mb-3 ls:text-sm ll:mt-8 ll:mb-4 ll:text-lg xl:text-2xl">
           Manage Profile
         </Text>
       </Pressable>

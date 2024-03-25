@@ -6,29 +6,11 @@ import { TabView, TabBar, SceneMap } from "react-native-tab-view";
 import ReviewItem from "./ReviewItem";
 import movies from "../assets/data/movie";
 import VideoPlayer from "./VideoPlayer";
-
-interface HomeProperties {
-  category: {
-    id: string;
-    title: string;
-    movies: {
-      id: string;
-      title?: string;
-      year?: number;
-      episodes?: number;
-      maturityRating?: string;
-      description?: string;
-      poster?: string;
-      banner?: string;
-      casts?: string[];
-      genre?: string[];
-    }[];
-  };
-}
+import { HomeProps } from "../types/data-prop";
 
 const movie = movies.seasons.items[0];
 
-const Card = (props: HomeProperties) => {
+const Card = (props: HomeProps) => {
   const { category } = props;
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);

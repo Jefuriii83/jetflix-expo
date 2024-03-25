@@ -14,7 +14,7 @@ const SearchBar = () => {
           className="flex-1 h-10 px-4 bg-transparent text-white"
           value={text}
           onChangeText={setText}
-          placeholder="Search here..."
+          placeholder="Search Movies, TV Shows..."
           placeholderTextColor="#999"
         />
         {text && <Feather name="x" size={24} color="gray" onPress={handleClearText} className="mr-2 absolute right-0" />}

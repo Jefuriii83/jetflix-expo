@@ -1,10 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
+import { HeaderProps } from '../types/data-prop';
 
-interface HeaderProps {
-  title: string;
-}
 
 const HeaderHome = ({ title }: HeaderProps) => {
   return (

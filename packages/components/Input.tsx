@@ -1,21 +1,10 @@
 import React from "react";
-
-interface InputProps {
-  id: string;
-  // onChange? : any;
-  // value?: string;
-  label: string;
-  type?: string;
-  className?: string;
-}
+import { InputProps } from "../types/param-prop";
 
 const Input = ({
   id,
-  // onChange,
-  // value,
   label,
   type,
-  className,
 }: InputProps) => {
   return (
     <div className="relative">

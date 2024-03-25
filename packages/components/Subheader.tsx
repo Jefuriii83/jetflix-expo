@@ -1,10 +1,7 @@
 import { View, Text, Pressable } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { AntDesign, FontAwesome5, Ionicons } from "@expo/vector-icons";
-
-type SubheaderProps = {
-  genreTitle: string;
-};
+import { SubheaderProps } from "../types/param-prop";
 
 const Subheader = (title: SubheaderProps) => {
   return (
