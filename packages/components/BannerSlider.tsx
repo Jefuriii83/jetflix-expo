@@ -2,12 +2,7 @@ import { ImageBackground, Pressable, Text, View } from "react-native";
 import { Path, Svg } from "react-native-svg";
 import categories from "../assets/data/categories";
 import { FlatList } from "react-native-gesture-handler";
-
-type SliderProps = {
-  title: string;
-  description: string;
-  maturityNumber: string;
-};
+import { SliderProps } from "../types/data-prop";
 
 const BannerSlider = () => {
   const laCasaDePapel = categories.items.find((category) =>

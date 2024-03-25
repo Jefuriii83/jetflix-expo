@@ -1,17 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useColorScheme } from '../../../packages/components/useColorScheme';
 import { Feather } from '@expo/vector-icons';
 import Colors from '../../../packages/constants/Colors';
+import { StatusBar } from 'expo-status-bar';
+
+
+import TVShowDetails from '../../../packages/screen/TVShowScreen';
+import NewReview from '@/app/Mobile/NewReview';
 import TabTwoScreen from './search';
 import Downloads from './downloads';
 import Menu from './menu';
 import index from './index';
-import { StatusBar } from 'expo-status-bar';
-import TVShowDetails from '../../../packages/screen/TVShowScreen';
-import { useState } from 'react';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -37,6 +40,22 @@ function IndexStack() {
     <Stack.Screen
       name="TVShowDetails" 
       component={TVShowDetails} 
+      options={{
+        headerTintColor: 'white',
+          headerTitleStyle: { color: 'red', fontSize: 30 },
+          headerStyle: {
+            backgroundColor: headerColor,
+          },
+          headerTitleAlign: 'center',
+
+          headerShown: true,
+          headerStatusBarHeight: 0,
+          title: "Jetflix",
+      }}
+    />
+     <Stack.Screen
+      name="NewReview" 
+      component={NewReview} 
       options={{
         headerTintColor: 'white',
           headerTitleStyle: { color: 'red', fontSize: 30 },

@@ -2,37 +2,32 @@ import { router } from "expo-router"; // Fix import statement
 import { TouchableOpacity, View, Text, Image, Pressable } from "react-native";
 import profiles from "../../packages/assets/data/profiles";
 import { Platform } from "react-native";
+import { ProfileProps } from "../types/data-prop";
 
-type ProfileProps = {
-  profile: {
-    name: string;
-    avatar: string;
-  };
-};
 
 const ProfileCard = (props: ProfileProps) => {
   const { profile } = props;
 
   const isWeb = Platform.OS === "web";
 
-  //  const profileAction = router.navigate({
-  //   pathname: "./Mobile/(tabs)",
-  //    params: { id: "" },
-  //  });
+    // const profileAction = router.navigate({
+    //  pathname: "./Mobile/(tabs)",
+    //   params: { id: "" },
+    // });
 
   //Conditionally render based on platform
-  const profileAction =
-    Platform.OS === "web"
-      ? () => {
-          router.navigate({
-            pathname: "/(web)/browse",
-          });
-        }
-      : () => {
-          router.navigate({
-            pathname: "./Mobile/(tabs)",
-            params: { id: "" },
-          });
+   const profileAction =
+     Platform.OS === "web"
+     ? () => {
+           router.navigate({
+             pathname: "/(web)/browse",
+           });
+         }
+       : () => {
+           router.navigate({
+             pathname: "./Mobile/(tabs)",
+             params: { id: "" },
+           });
         };
 
   return isWeb ? (

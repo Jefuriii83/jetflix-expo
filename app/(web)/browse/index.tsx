@@ -1,12 +1,8 @@
 import { useLocalSearchParams } from "expo-router";
 import {
   View,
-  Text,
-  TouchableOpacity,
   ScrollView,
   FlatList,
-  Image,
-  ImageBackground,
 } from "react-native";
 
 import Card from "../../../packages/components/Card";

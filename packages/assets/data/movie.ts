@@ -46,7 +46,7 @@ export default {
                     poster: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/ep0.jpg',
                     duration: '49m',
                     plot: 'An open-and-shut case becomes anything but when Harvey is accused of an inappropriate dalliance with a married woman.',
-                    video: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+                    video: 'https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4',
                 }]
             }
         }]

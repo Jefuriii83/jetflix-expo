@@ -3,26 +3,7 @@ import React from 'react'
 import {AntDesign} from '@expo/vector-icons';
 import {Text, View} from "./Themed"
 import { Pressable } from 'react-native';
-
-
-interface EpisodeProp {
-  episode: {
-      id: string,
-      title: string,
-      poster: string,
-      duration: string,
-      plot: string,
-      video: string,
-  },
-  onPress: (episode: {
-      id: string,
-      title: string,
-      poster: string,
-      duration: string,
-      plot: string,
-      video: string,
-  }) => void
-}
+import { EpisodeProp } from '../types/data-prop';
 
 
 const EpisodeItem = (props: EpisodeProp) => {

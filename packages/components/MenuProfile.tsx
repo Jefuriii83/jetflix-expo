@@ -19,7 +19,7 @@ const MenuProfile = () => {
 
       />
         <View className='absolute bottom-14 right-16 bg-black tablet:bottom-24 tablet:right-52'>
-        <AntDesign name="pluscircle" size={50} color="gray" className='tablet:w-[70px] tablet:h-[70px]'/>
+        <AntDesign name="pluscircle" size={50} color="gray" className='tablet:w-60 tablet:h-60'/>
         </View>
       
     </View>

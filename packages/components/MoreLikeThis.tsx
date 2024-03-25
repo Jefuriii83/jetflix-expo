@@ -16,7 +16,7 @@ const MoreLikeThis = () => {
         data={series.movies}
         renderItem={({ item }) => (
           <Image
-            className="w-[13vh] h-[20vh] object-cover rounded-md m-1 items-center justify-center tablet:w-[225px] tablet:h-[300px]"
+            className="w-28 h-40 object-cover rounded-md m-1 items-center justify-center tablet:w-[225px] tablet:h-[300px]"
             source={{ uri: item.poster }}
           />
         )}

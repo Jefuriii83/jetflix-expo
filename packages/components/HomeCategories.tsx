@@ -5,30 +5,20 @@ import { Text} from './Themed';
 import {Image, FlatList} from 'react-native';
 import categories from '../assets/data/categories';
 import { useNavigation } from '@react-navigation/native';
-
+import { HomeProperties } from '../types/data-prop';
  
-interface HomeProperties {
-  category: {
-    id: string;
-    title: string;
-    movies: {
-      id: string,
-      poster: string,
-  }[]
-  }
-}
 
 const HomeCategories = (props: HomeProperties) => {
 const {category} = props;
 const navigation = useNavigation();
 
-const onTVShowPress = (movie) => {
+const onTVShowPress = (movie: HomeProperties) => {
   navigation.navigate('TVShowDetails', {id: movie.id})
 }
 
   return (
     <>
-      <Text style={styles.title} className='pt-2 ml-1 text-white tablet:text-2xl'>{category.title}</Text>
+      <Text style={styles.title} className='ml-1 text-white tablet:text-2xl'>{category.title}</Text>
       <FlatList 
         data={category.movies}
         renderItem={({item}) => (
